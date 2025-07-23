@@ -5,21 +5,24 @@ from ..models import Noticia
 test_bp = Blueprint("tests", __name__)
 
 titles = [
-    "Curso de programação do Cesar School gratuito",
-    "Bolsa 100% para universidades de tecnologia",
-    "Bolsas FACEPE"
+    "Santander abre 5 mil vagas para formação de mulheres em TI",
+    "Bolsa Futuro Digital abre 1,5 mil vagas em cursos gratuitos de tecnologia; saiba como se inscrever",
+    "Prefeitura do Recife lança edital e abre inscrições para o segundo ciclo do Programa Embarque Digital",
+    "Fundação Edson Queiroz abre 485 vagas em cursos gratuitos para população em vulnerabilidade social"
 ]
 
 bodies = [
-    "O Cesar School está oferecendo um curso gratuito de introdução à programação para jovens interessados em tecnologia. A iniciativa visa capacitar e incentivar novos talentos para o mercado de TI.",
-    "Diversas universidades de tecnologia estão oferecendo bolsas integrais para cursos de graduação e pós-graduação. A oportunidade é voltada para estudantes com bom desempenho acadêmico e interesse na área tecnológica.",
-    "A Fundação de Amparo à Ciência e Tecnologia do Estado de Pernambuco (FACEPE) está com inscrições abertas para bolsas de pesquisa em diversas áreas do conhecimento. O objetivo é fomentar a produção científica e a inovação no estado."
+    "",
+    "",
+    "",
+    ""
 ]
 
 links = [
-    "https://www.cesar.school/",
+    "https://www.santander.com.br/",
     "https://www.portal.capes.gov.br/bolsas/bolsas-no-pais",
-    "https://www.facepe.br/"
+    "https://www2.recife.pe.gov.br/",
+    "https://unifor.br/fundacao-edson-queiroz"
 ]
 
 @test_bp.route("/test")
