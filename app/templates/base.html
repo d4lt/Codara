@@ -1,11 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codara</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Codara - Povos Originários & Tecnologia</title>
+  <link rel="stylesheet" href="../static/codara.css" />
 </head>
 <body>
-    <h1>Hello world</h1>
+  <header>
+    <div class="container">
+      <h1>Codara</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio" class="navegacao">Blogs</a></li>
+          <li><a href="#sobre" class="navegacao">Sobre</a></li>
+          <li><a href="#noticias" class="navegacao">Serviços</a></li>
+          <li><a href="#noticias" class="navegacao">Equipe</a></li>
+          <li><a href="#contato" class="navegacao"  >Projeto</a></li>
+        </ul>
+      </nav>
+      <div class="login">
+        <span>LOGIN</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="container">
+      <div id="cursos-container">
+        <span id="cursos">CURSOS</span>
+      </div>
+      <div id="noticias">
+        
+        <img src="../static/imagens/pessoa_comp.png"  id="img_principal">
+        <div id="noticias_lateral">
+          <img src="../static/imagens/noticia1.png"  id="notice">
+          <img src="../static/imagens/noticia2.png"  id="notice">
+          <img src="../static/imagens/noticia3.png"  id="notice">
+        </div>
+      </div>
+
+    </section>
+
+    <section id="jornada">
+      <div class="fundo-container">
+        <img src="../static/imagens/fundoamarelo.png" class="fundo fundo-amarelo">
+        <img src="../static/imagens/fundobranco.png" class="fundo fundo-branco">
+      </div>
+    
+      <div class="conteudo-jornada">
+        <h1 id="jornadatitulo">INICIE SUA JORNADA</h1>
+        <p id="texto_jornada">
+          Para você que não sabe nada <br> sobre T.I e nem sabe como <br> começar.
+        </p>
+        <button id="botaocomecar">COMEÇAR</button>
+      </div>
+    </section>    
+
+    <script src="../static/codara.js"></script>
+
+    <footer id="footer-codara">
+      <!-- Círculos decorativos -->
+      <div class="decor-circles">
+        <span class="circle c1"></span>
+        <span class="circle c2"></span>
+        <span class="circle c3"></span>
+        <span class="circle c4"></span>
+        <span class="circle c5"></span>
+        <span class="circle c6"></span>
+      </div>
+    
+      <!-- Conteúdo principal -->
+      <div class="footer-content">
+        <!-- Logo -->
+        <div class="footer-column footer-logo">
+          <span>CODARA</span>
+        </div>
+    
+        <!-- Menu -->
+        <div class="footer-column">
+          <h4>Menu</h4>
+          <ul>
+            <li>Principal</li>
+            <li>Sobre</li>
+            <li>Informação</li>
+          </ul>
+        </div>
+    
+        <!-- Mercado -->
+        <div class="footer-column">
+          <h4>Mercado</h4>
+          <ul>
+            <li>Pesquisa</li>
+            <li>Companhia</li>
+            <li>Termos</li>
+          </ul>
+        </div>
+    
+        <!-- Contato -->
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <ul>
+            <li>Email</li>
+            <li>LinkedIn</li>
+            <li>Instagram</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+    
+        <!-- Boletim Informativo -->
+        <div class="footer-column newsletter">
+          <h4>Participe de nosso boletim informativo!</h4>
+          <form>
+            <input type="email" placeholder="Endereço de email" required>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <footer>
+      <p>&copy; 2025 Codara. Todos os direitos reservados.</p>
+    </footer>
+    
 </body>
 </html>
