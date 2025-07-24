@@ -1,7 +1,7 @@
 :root {
     --cor-primaria: #FDF2C4;     /* Terracota */
     --cor-secundaria: #3d087b;   /* Laranja queimado */
-    --cor-destaque: #3d087b;     /* Amarelo claro */
+    --cor-destaque: #EF826B;     /* Amarelo claro */
     --cor-fundo: #002147;        /* Bege claro */
     --cor-texto: black;        /* Marrom escuro */
   }
@@ -388,5 +388,67 @@
       margin-bottom: 30px;
     }
   }
-  
-  
+
+/* TRILHAS.HTML */
+
+#trilhas_title_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 150px auto;
+}
+
+#title_trilhas {
+  font-size: 5rem;
+  text-align: center;
+  background: linear-gradient(to right, #EF826B, #FDF2C4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.3em;
+}
+
+#trilhas_title_container > span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+}
+
+#trilhas_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.trilhas_field_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trilhas_field_container > h2 {
+  color: white;
+  font-size: 1.2rem;
+  font-style: bold;
+  margin-top: 2rem;
+}
+
+.trilha_button_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+
+}
+
+.trilha_button {
+  display: flex;
+  background: linear-gradient(10deg, var(--cor-primaria), var(--cor-destaque));
+  align-items: center;
+  color: black;
+  /* text-overflow: clip; */
+  font-size: 1rem;
+  max-width: 250px;
+  padding: 1rem;
+  border-radius: 15px;
+  text-decoration: none;
+}
