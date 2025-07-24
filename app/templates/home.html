@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="inicio" class="container">
+  <div id="cursos-container">
+    <span id="cursos">CURSOS</span>
+  </div>
+  <div id="noticias">
+
+    <img src="../static/imagens/pessoa_comp.png" id="img_principal">
+    <div id="noticias_lateral">
+      <img src="../static/imagens/noticia1.png" id="notice">
+      <img src="../static/imagens/noticia2.png" id="notice">
+      <img src="../static/imagens/noticia3.png" id="notice">
+    </div>
+  </div>
+
+</section>
+
+<section id="jornada">
+  <div class="fundo-container">
+    <img src="../static/imagens/fundoamarelo.png" class="fundo fundo-amarelo">
+    <img src="../static/imagens/fundobranco.png" class="fundo fundo-branco">
+  </div>
+
+  <div class="conteudo-jornada">
+    <h1 id="jornadatitulo">INICIE SUA JORNADA</h1>
+    <p id="texto_jornada">
+      Para você que não sabe nada <br> sobre T.I e nem sabe como <br> começar.
+    </p>
+    <button id="botaocomecar">COMEÇAR</button>
+  </div>
+</section>
+
+{% endblock content %}
