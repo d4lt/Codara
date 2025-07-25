@@ -1,5 +1,25 @@
-from .models import Noticia
+from .models import Noticia, Empresa
 from .extensions import db
+
+empresas = [ 
+            {
+    'nome': 'Santander',
+    'prioridade': 5
+},
+{
+    'nome': 'CAPES',
+    'prioridade': 4
+},
+
+{
+    'nome': 'Prefeitura do Recife',
+    'prioridade': 3
+},
+{
+    'nome': 'Fundacao Edson Queiroz',
+    'prioridade': 2
+},
+            ]
 
 titles = [
     "Santander abre 5 mil vagas para formação de mulheres em TI",
@@ -23,11 +43,19 @@ links = [
 ]
 
 def populate_db():
+    Empresa.query.delete()
     Noticia.query.delete()
     db.session.commit()
     
     for i in range(4):
-        n = Noticia(title=titles[i], body=bodies[i], link=links[i])
+        e = Empresa(name=empresas[i]['nome'], priority=empresas[i]['prioridade'])
+        db.session.add(e)
+    db.session.commit()
+    
+    es = Empresa.query.all()
+    for i in range(4):
+        e_id = es[i].id
+        n = Noticia(title=titles[i], body=bodies[i], link=links[i], empresa_id=e_id)
         db.session.add(n)
     db.session.commit()
     

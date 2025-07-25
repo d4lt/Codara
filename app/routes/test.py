@@ -1,6 +1,7 @@
 from ..extensions import db
 from flask import Blueprint
 from ..models import Noticia
+from ..utils import populate_db
 
 test_bp = Blueprint("tests", __name__)
 
