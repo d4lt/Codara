@@ -1,13 +1,19 @@
 from flask import Blueprint, render_template
 from ..models import Noticia
+from ..utils import populate_db
 
 main_routes = Blueprint("main", __name__)
 
 @main_routes.route("/home")
 @main_routes.route("/")
 def home():
+    ns = Noticia.query.all()
+    
+    if not len(ns):
+        populate_db()
+    
     noticias = []
-    for n in Noticia.query.all():
+    for n in ns:
         noticia = {
             'title': n.title,
             'body': n.body,
