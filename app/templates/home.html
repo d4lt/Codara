@@ -5,6 +5,7 @@
     <img src="../static/imagens/arrow_right.png" alt="" />
   </div>
   <div id="noticias">
+    {% if noticias %}
     <div
       id="noticia_principal"
       class="noticia_container"
@@ -24,6 +25,7 @@
       </div>
       {% endfor %}
     </div>
+    {% endif %}
   </div>
   <div id="seta_baixo_container">
     <img src="../static/imagens/arrow_right-1.png" alt="" />
