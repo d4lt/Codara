@@ -2,7 +2,7 @@
   --cor-primaria: #fdf2c4; 
   --cor-secundaria: #3d087b; 
   --cor-destaque: #ef826b; 
-  --cor-fundo: #002147; 
+  --cor-fundo: #212844; 
   --cor-texto: black; 
 }
 
@@ -534,80 +534,86 @@ footer {
   border: 5px solid white;
 }
 
+#trilha_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 174px;
+  margin-top: 140px;
+  font-size: 4rem;
+  font-weight: bold;
 
-:root {
-  --bg: #1f2d3d;            /* fundo da seção roadmap */
-  --node-bg: rgba(11, 31, 61, 0.2);  /* leve transparência em azul escuro */
-  --node-border: #0b1f3d;   /* bordo dos nós */
-  --text: #f9a38a;          /* texto mantém coral para contraste */
-  --line: #0b1f3d;          /* linhas em azul escuro */
+  background: linear-gradient(to right, #ef826b, #fdf2c4);
+  -webkit-background-clip: text;
+  /* background-clip: initial; */
+  -webkit-text-fill-color: transparent;
 }
 
-.tree ul {
+#trilha_nodes_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  gap: 7rem;
+}
+
+.node_level {
   position: relative;
-}
-
-/* 1) Primeiro nível: Internet e Escolha um Framework etc */
-.tree > ul {
   display: flex;
-  flex-direction: column;
+  /* width: 60rem; */
+  justify-content: space-between;
   align-items: center;
+  /* gap: 4rem; */
 }
 
-/* 2) Ramos horizontais de Internet (HTML, Sistemas de Controle de Versão, Gerenciadores de Pacotes) */
-.tree > ul > li > ul {
+.nl2 {
+  padding-right: 25rem;
+}
+
+
+.node {
+  z-index: 1;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  padding-top: 20px;  /* mantém o espaçamento */
-}
-
-/* 3) Ramos horizontais de HTML (JavaScript, CSS, Hospedagem de VCS) */
-.tree > ul > li > ul > li > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 20px;
-}
-
-/* 4) Ramos horizontais de "Escolha um Framework" (Escrevendo CSS e Ferramentas de Build) */
-.tree > ul > li:nth-child(2) > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 20px;
-}
-
-
-/* Remover float para empilhar verticalmente */
-.tree li {
-  float: none;
+  width: 18rem;
+  height: 4rem;
+  border: 5px solid var(--cor-primaria); 
+  border-radius: 10px; 
+  color: var(--cor-primaria);
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.5rem;
   text-align: center;
-  list-style-type: none;
-  position: relative;
-  padding: 20px 5px 0 5px;
+
+  transition: 0.5s;
+  cursor: pointer;
 }
 
-/* Ajuste das linhas horizontais: agora só conectam pai‑filho */
-.tree li::before,
-.tree li::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 0;
-  height: 20px;
-  border-top: none;
+.node:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
 }
-.tree ul ul::before {
-  content: '';
+
+.vertical_line {
+  z-index: 2;
   position: absolute;
-  top: 0;
-  left: 50%;
-  border-left: 2px solid var(--line);
-  width: 0;
-  height: 20px;
+  border-left: 6px solid var(--cor-primaria);
+  height: 7rem;
+  left: 9rem;
+  top: 4rem;
 }
+
+.nl2 .vertical_line, .nl3 .vertical_line {
+  left: 33rem;
+}
+
+.horizontal_line {
+  width: 100px;
+  border-top: 6px solid var(--cor-primaria);
+  top: 2rem;
+}
+
+/* .node_level hr {
+  z-index: 2;
+  border-top: 6px solid var(--cor-primaria);
+} */
