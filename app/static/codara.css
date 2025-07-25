@@ -24,21 +24,14 @@ body {
 
 #img_principal {
   width: 400px;
-  border-radius: 70px;
+  border-radius: 50px;
 }
 
 #img_setas {
   width: 80px;
 }
 
-#jornada {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: var(--cor-primaria) solid 30px;
-  border-bottom: var(--cor-primaria) solid 30px;
-  padding: 8rem 1rem;
-}
+
 
 #jornadatitulo {
   color: #212844;
@@ -70,6 +63,7 @@ body {
   flex-direction: column;
   gap: 20px;
   width: 500px;
+  border-radius: 30px;
 }
 
 #noticias {
@@ -79,6 +73,7 @@ body {
 
 .noticia_container {
   position: relative;
+  cursor: pointer;
 }
 
 .noticia_container span {
@@ -123,10 +118,17 @@ body {
 
 #cursos {
   font-weight: bold;
+  text-decoration: none;
   color: var(--cor-primaria);
   padding: 0.5rem 3rem;
   border-radius: 50px;
-  border: #ccc solid 3px;
+  border: var(--cor-primaria) solid 3px;
+  transition: 0.5s;
+}
+
+#cursos:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
 }
 
 #seta_baixo_container {
@@ -137,16 +139,26 @@ body {
   margin-right: 13rem;
 } */
 
-.login {
+#login {
   color: var(--cor-texto);
   padding: 0.5rem 3.5rem;
   border-radius: 30px;
+  border: 2.5px solid var(--cor-primaria);
   background-color: #fdf2c4;
   font-weight: bold;
+  transition: 0.5s;
+}
+#login:hover {
+  background-color: var(--cor-fundo);
+  color: var(--cor-primaria);
 }
 
 .navegacao {
   font-weight: lighter;
+  transition: 0.5s;
+}
+.navegacao:hover {
+  font-weight: bold;
 }
 
 h1 {
@@ -165,15 +177,13 @@ header {
   background-color: var(--cor-fundo);
   color: white;
   padding: 20px 0;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-header .container {
+header .header_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
-  margin: auto;
   padding: 0 20px;
 }
 
@@ -238,15 +248,8 @@ footer {
 #jornada {
   position: relative;
   width: 100%;
-  height: 300px; /* ajuste conforme necessário */
-  overflow: hidden;
-}
-
-#jornada {
-  position: relative;
-  width: 100%;
-  height: 400px; /* ajuste conforme necessário */
-  overflow: hidden;
+  height: 600px;
+  overflow:hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -265,7 +268,7 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .fundo-branco {

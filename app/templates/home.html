@@ -1,17 +1,24 @@
 {% extends "base.html" %} {% block content %}
 <section id="inicio" class="container">
   <div id="cursos-container">
-    <span id="cursos">CURSOS</span>
+    <a id="cursos" href="/trilhas">CURSOS</a>
     <img src="../static/imagens/arrow_right.png" alt="" />
   </div>
   <div id="noticias">
-    <div id="noticia_principal" class="noticia_container">
+    <div
+      id="noticia_principal"
+      class="noticia_container"
+      onclick="window.open('{{noticias[0].link}}', '_blank')"
+    >
       <span>{{noticias[0].title}}</span>
       <img src="../static/imagens/pessoa_comp.png" id="img_principal" />
     </div>
     <div id="noticias_lateral">
       {% for n in range(1,4) %}
-      <div class="noticia_lateral noticia_container">
+      <div
+        class="noticia_lateral noticia_container"
+        onclick="window.open('{{noticias[n].link}}', '_blank')"
+      >
         <span>{{noticias[n].title}}</span>
         <img src="../static/imagens/noticia{{n}}.png" class="img_noticia" />
       </div>
@@ -19,7 +26,7 @@
     </div>
   </div>
   <div id="seta_baixo_container">
-    <img src="../static/imagens/arrow_right-1.png" alt="">
+    <img src="../static/imagens/arrow_right-1.png" alt="" />
   </div>
 </section>
 
