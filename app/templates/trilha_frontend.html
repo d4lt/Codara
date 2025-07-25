@@ -1,5 +1,157 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <link rel="stylesheet" href="styles.css">
+
+  <title>Trilha Front‑End</title>
+  <style>
+    
+    :root {
+      --bg: #002147;
+      --node-bg: rgba(240, 228, 196, 0.1);
+      --node-border: #eecb9c;
+      --texto: #f9a38a;
+      --line: #eecb9c;
+      --font: 'Arial', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: var(--text);
+    }
+
+    /* Tree container */
+    .tree {
+      display: flex;
+      justify-content: center;
+    }
+    .tree ul {
+      padding-top: 20px;
+      position: relative;
+      transition: all 0.5s;
+    }
+    .tree li {
+      float: left;
+      text-align: center;
+      list-style-type: none;
+      position: relative;
+      padding: 20px 5px 0 5px;
+      transition: all 0.5s;
+    }
+    /* Conectores horizontais */
+    .tree li::before,
+    .tree li::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 20px;
+      border-top: 2px solid var(--line);
+    }
+    .tree li::before { right: 50%; }
+    .tree li::after  { left: 50%; }
+    /* Remove conectores para filhos únicos */
+    .tree li:only-child::before,
+    .tree li:only-child::after {
+      display: none;
+    }
+    .tree li:only-child { padding-top: 0; }
+    /* Ajustes extremidades */
+    .tree li:first-child::before,
+    .tree li:last-child::after {
+      border: none;
+    }
+    .tree ul ul::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      border-left: 2px solid var(--line);
+      width: 0;
+      height: 20px;
+    }
+
+    /* Estilo dos nós */
+    .tree li .node {
+      border: 2px solid var(--node-border);
+      padding: 10px 20px;
+      border-radius: 6px;
+      display: inline-block;
+      background: var(--node-bg);
+      font-size: 0.9rem;
+      min-width: 140px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Front‑End Roadmap</h1>
+  <div class="tree">
+    <ul>
+      <li>
+        <div class="node">Internet</div>
+        <ul>
+          <li>
+            <div class="node">HTML</div>
+            <ul>
+              <li><div class="node">JavaScript</div></li>
+              <li><div class="node">CSS</div></li>
+              <li><div class="node">Hospedagem de VCS</div></li>
+            </ul>
+          </li>
+          <li>
+            <div class="node">Sistemas de Controle de Versão</div>
+          </li>
+          <li>
+            <div class="node">Gerenciadores de Pacotes</div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <div class="node">Escolha um Framework</div>
+        <ul>
+          <li>
+            <div class="node">Escrevendo CSS</div>
+            <ul>
+              <li><div class="node">Pré‑Processadores CSS</div></li>
+              <li><div class="node">Arquitetura do CSS</div></li>
+            </ul>
+          </li>
+          <li>
+            <div class="node">Ferramentas de Build</div>
+            <ul>
+              <li><div class="node">Linters e Formatadores</div></li>
+              <li><div class="node">Empacotadores de Módulo</div></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><div class="node">Testes</div></li>
+      <li><div class="node">Estratégias de Autenticação</div></li>
+      <li><div class="node">Noções Básicas de Segurança Web</div></li>
+      <li><div class="node">Componentes Web</div></li>
+      <li><div class="node">Verificadores de Tipos</div></li>
+      <li><div class="node">Renderização no Servidor (SSR)</div></li>
+      <li><div class="node">GraphQL</div></li>
+      <li><div class="node">Aplicações Web Progressivas (PWA)</div></li>
+      <li><div class="node">Geradores de Site Estático</div></li>
+      <li><div class="node">Aplicativos Mobile</div></li>
+      <li><div class="node">Aplicativos para Desktop</div></li>
+    </ul>
+  </div>
+</body>
+</html>
+
+
 
 {% endblock %}
