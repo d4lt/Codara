@@ -6,4 +6,5 @@ class Noticia(db.Model):
     title = db.Column(db.Text, nullable=False)
     body = db.Column(db.Text)
     link = db.Column(db.Text, nullable=False)
+    
     # todo: Date

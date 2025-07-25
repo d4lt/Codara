@@ -6,9 +6,17 @@ main_routes = Blueprint("main", __name__)
 @main_routes.route("/home")
 @main_routes.route("/")
 def home():
-    #get from api TODO
+    noticias = []
+    for n in Noticia.query.all():
+        noticia = {
+            'title': n.title,
+            'body': n.body,
+            'link': n.link
+        }
+        noticias.append(noticia)
     
-    return render_template("home.html")
+    
+    return render_template("home.html", noticias=noticias)
 
 @main_routes.route("/trilhas")
 def trilhas():
