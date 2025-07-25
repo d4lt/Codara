@@ -1,11 +1,44 @@
 {% extends 'base.html' %} {% block content %}
+
+<div id="popup_container">
+  <div id="popup_content">
+    <div id="closepopup_container">
+      <button id="close_popup">X</button>
+
+    </div>
+    <span id="popup_title">VÍDEOS</span>
+
+    <div class="ordenador_container">
+      <span class="ordenador">1</span>
+    </div>
+    <div class="ordenador_container">
+      <span class="ordenador">2</span>
+    </div>
+    <div class="ordenador_container">
+      <span class="ordenador">3</span>
+    </div>
+
+    <span>O que é um domínio?</span>
+    <span>O que é HTTP?</span>
+    <span>Como a internet funciona?</span>
+
+    <img src="../static/imagens/popup_imgs/Rectangle 109.png" alt="imagem de video ensinando conceitos basicos de internet">
+    <img src="../static/imagens/popup_imgs/Rectangle 108.png" alt="imagem de video ensinando conceitos basicos de internet">
+    <img src="../static/imagens/popup_imgs/Rectangle 106.png" alt="imagem de video ensinando conceitos basicos de internet">
+
+    <a href="https://www.youtube.com/watch?v=PaOOO2VdBoc">Como funciona a INTERNET</a>
+    <a href="https://www.youtube.com/watch?v=PcHbyGVoqZk">Entendendo o protocolo HTTP</a>
+    <a href="https://www.youtube.com/watch?v=G-ATT8bljR0">O que é domínio ? Entenda sobre um domínio web.</a>
+  </div>
+</div>
+
 <div id="trilha_title">
   <h1>FRONT-END</h1>
 </div>
 
 <div id="trilha_nodes_container">
   <div class="node_level ">
-    <div class="node">Internet</div>
+    <div class="node" id="internetBtn">Internet</div>
 
     <div class="vertical_line"></div>
   </div>
@@ -79,4 +112,5 @@
     <div class="node">GraphQL</div>
   </div>
 </div>
+<script src="../static/popup.js" charset="utf-8"></script>
 {% endblock %}
