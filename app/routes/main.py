@@ -22,3 +22,10 @@ def home():
 def trilhas():
     
     return render_template("trilhas.html")
+
+# parcialmente implementado
+# apenas suporta a trilha frontend
+@main_routes.route("/trilhas/<nome>")
+def trilha_rota(nome):
+    return render_template("trilha_frontend.html")
+    
