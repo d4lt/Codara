@@ -30,7 +30,7 @@ def add_noticias():
     Noticia.query.delete()
     db.session.commit()
     
-    for i in range(3):
+    for i in range(4):
         n = Noticia(title=titles[i], body=bodies[i], link=links[i])
         db.session.add(n)
     db.session.commit()
